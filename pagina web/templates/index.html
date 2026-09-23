@@ -1,0 +1,112 @@
+<html lang="es"><head>
+  <meta charset="utf-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=8b70b836-3183-40d2-8985-07f6629aff09
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Carrera Rosa — comunidad, prevención y concientización sobre el cáncer de mama.">
+  <title>Carrera Rosa | Juntas somos más fuertes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Pacifico&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+</head>
+<body>
+  <header class="site-header" id="inicio">
+    <a class="brand" href="#inicio" aria-label="Carrera Rosa - inicio">
+      <img class="brand-logo" src="{{ url_for('static', filename='assets/logo-carrera-rosa.jpg') }}" alt="Carrera Rosa 2026">
+    </a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Navegación principal">
+      <a class="active" href="#inicio">Inicio</a>
+      <a href="#sobre">Sobre Carrera Rosa</a>
+      <a href="#carrera">La carrera</a>
+      <a href="#inscripciones">Inscripciones</a>
+      <a href="#galeria">Ediciones anteriores</a>
+      <a href="#sponsors">Sponsors</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">JUNTAS SOMOS MÁS FUERTES</p>
+        <h1>CARRERA <span>ROSA</span></h1>
+        <h2>Corremos por más vida</h2>
+        <p>Un encuentro solidario para concientizar, acompañar y promover la prevención del cáncer de mama.</p>
+        <div class="hero-meta">
+          <div><b>📅 Próxima edición</b><span>01 de Noviembre</span></div>
+          <div><b>📍 Pergamino</b><span>Pergamino, Buenos Aires</span></div>
+        </div>
+        <a class="btn" href="#inscripciones">INSCRIBITE <span>→</span></a>
+      </div>
+      <div class="hero-art">
+        <img src="assets/logo-carrera-rosa.jpg" alt="Carrera Rosa 2026 — Corazones en Acción, Pelucas Solidarias Pergamino">
+      </div>
+    </section>
+
+    <section class="section about" id="sobre">
+      <div class="section-heading">
+        <p class="script">Sobre Carrera Rosa</p>
+        <h2>Mucho más que una carrera</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Carrera Rosa es un movimiento solidario que busca generar conciencia sobre la importancia de la detección temprana y acompañar a quienes atraviesan el cáncer de mama.</p>
+          <p class="motto">Informar, prevenir, acompañar, siempre.</p>
+        </div>
+        <div class="pillars">
+          <article><span>🎗️</span><h3>Concientización</h3><p>Porque la información también salva vidas.</p></article>
+          <article><span>♡</span><h3>Apoyo</h3><p>Para quienes transitan la enfermedad.</p></article>
+          <article><span>♧</span><h3>Comunidad</h3><p>Juntas y juntos somos más fuertes.</p></article>
+          <article><span>✿</span><h3>Prevención</h3><p>La detección temprana hace la diferencia.</p></article>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section class="registration" id="inscripciones">
+      <div class="registration-inner">
+        <div><p class="script white">Inscripciones</p><p>Tu participación hace la diferencia. ¡Sumate!</p></div>
+        <div class="price"><strong>Inscribirme</strong><a class="btn light" href="https://forms.gle/JrgnxcEzrVu9SjFL6" target="_blank" rel="noopener" data-pay="3k">Inscripción 3K</a><a class="btn light" href="https://forms.gle/dTrctEW9ihT5QFF5A" target="_blank" rel="noopener" data-pay="3k">Inscripción 10K</a></div>
+        <div class="include"><small>Incluye</small><p>Remera oficial · Número de corredor · Hidratación · Kit Corredor · Medalla finisher</p></div>
+        <div class="payment"><small>Pago virtual</small>
+          <p class="pay-links">
+            <a class="btn light" href="https://mpago.la/1f9kMuV" target="_blank" rel="noopener" data-pay="3k">PAGAR 3K</a>
+            <a class="btn light" href="https://mpago.la/2CTa3PG" target="_blank" rel="noopener" data-pay="10k">PAGAR 10K</a>
+          </p>
+          <p class="pay-cash"><a href="https://wa.me/5492477346621" target="_blank" rel="noopener">Contáctate con nuestro staff para pago en efectivo o transferencia</a></p>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="section gallery" id="galeria">
+      <div class="section-heading"><p class="script">Ediciones anteriores</p><h2>Cada paso cuenta</h2><p>Galería de momentos de Carrera Rosa.</p></div>
+      <div class="gallery-grid">
+        <button class="gallery-item" data-caption="Carrera Rosa"><div>FOTOS<br>DE LA<br>CARRERA</div></button>
+        <button class="gallery-item" data-caption="Juntas somos más fuertes"><div>JUNTAS<br>SOMOS<br>MÁS FUERTES</div></button>
+        <button class="gallery-item" data-caption="Comunidad Carrera Rosa"><div>COMUNIDAD<br>Y<br>CONCIENCIA</div></button>
+        <button class="gallery-item" data-caption="Un día para recordar"><div>CARRERA<br>ROSA</div></button>
+      </div>
+    </section>
+
+    <section class="section sponsors" id="sponsors">
+      <p class="script">Sponsors</p><p>Gracias a las empresas e instituciones que hacen posible esta iniciativa.</p>
+      <div class="sponsor-row"><span>SPONSOR</span><span>EMPRESA</span><span>INSTITUCIÓN</span><span>MARCA</span><span>ALIADO</span></div>
+    </section>
+  </main>
+
+  <footer id="contacto">
+    <div class="footer-brand"><strong>CARRERA<br><em>ROSA</em></strong><p>Juntas somos más fuertes ♡</p></div>
+    <div><h3>Contacto</h3><p>Instagram: <a href="https://instagram.com/carrerarosa2026" target="_blank" rel="noopener">@carrerarosa2026</a></p><p>WhatsApp: <a href="https://wa.me/5492477346621" target="_blank" rel="noopener">2477346621</a></p><p>Email: <a href="mailto:corazonesenaccionpp.ong@gmail.com">corazonesenaccionpp.ong@gmail.com</a></p></div>
+    <div><a class="btn outline" href="https://instagram.com/carrerarosa2026" target="_blank" rel="noopener">SEGUINOS EN INSTAGRAM</a>
+      <img class="footer-logo" src="{{ url_for('static', filename='assets/logo-corazones-en-accion.jpg') }}" alt="Carrera Rosa 2026 — Corazones en Acción">	</div>
+    <div class="copyright">Carrera Rosa · Pergamino, Buenos Aires · #CarreraRosa · #JuntasSomosMásFuertes</div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+  </html>
