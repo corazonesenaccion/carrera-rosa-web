@@ -1,0 +1,12 @@
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+# Esta parte dice: "Cuando alguien entre a la dirección principal (/), muéstrale el diseño de index.html"
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+# Esta parte inicia el servidor web
+if __name__ == "__main__":
+    app.run(debug=True)
