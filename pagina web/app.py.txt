@@ -1,6 +1,51 @@
 from flask import Flask, render_template
 
+import os
+from flask import Flask, render_template, request, redirect, url_for
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 app = Flask(__name__)
+
+# Configuración de Cloudinary (Reemplaza con tus datos de Cloudinary)
+cloudinary.config(
+    cloud_name = "mycytja9",
+    api_key = "788333624517352",
+    api_secret = "5yArvrGFGxhAvaFaBTphPfcdNqU",
+    secure = True
+)
+
+# Lista en memoria para almacenar las URLs de las fotos subidas temporalmente en la sesión activa
+user_photos = []
+
+@app.route('/')
+def index():
+    return render_template('index.html', user_photos=user_photos)
+
+@app.route('/upload', methods=['POST'])
+def upload_file():
+    if 'file' not in request.files:
+        return redirect(url_for('index'))
+    
+    file = request.files['file']
+    if file.filename == '':
+        return redirect(url_for('index'))
+        
+    if file:
+        # Subir la imagen directamente a la nube de Cloudinary
+        upload_result = cloudinary.uploader.upload(file)
+        
+        # Obtener la URL permanente de la imagen
+        image_url = upload_result.get('secure_url')
+        
+        # Guardar la URL en la lista
+        user_photos.append(image_url)
+        
+    return redirect(url_for('index'))
+
+if __name__ == '__main__':
+    app.run(debug=True)
 
 # Esta parte dice: "Cuando alguien entre a la dirección principal (/), muéstrale el diseño de index.html"
 @app.route("/")
