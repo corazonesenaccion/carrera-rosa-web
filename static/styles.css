@@ -35,9 +35,17 @@ body {
     z-index: 100;
 }
 
+.brand-logos-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}    
 .brand-logo {
     border-radius: 8px;
-    heigth: auto;
+    heigth: 50px;
+    width: auto;
+    object-fit: contain;
+}    
 .logo-1 {
     max-height: 80px;
 }
