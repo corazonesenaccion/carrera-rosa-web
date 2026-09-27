@@ -97,10 +97,17 @@
       </div>
     </section>
 
-    <section class="section sponsors" id="sponsors">
-      <p class="script">Sponsors</p><p>Gracias a las empresas e instituciones que hacen posible esta iniciativa.</p>
-      <div class="sponsor-row"><span>SPONSOR</span><span>EMPRESA</span><span>INSTITUCIÓN</span><span>MARCA</span><span>ALIADO</span></div>
-    </section>
+    <section class="section sponsors"
+     <section id="sponsors" class="sponsors-section">
+    <h2>Sponsors</h2>
+    <p>Gracias a las empresas e instituciones que hacen posible esta iniciativa.</p>
+    
+    <div class="sponsors-grid">
+        <img src="{{ url_for('static', filename='assets/logo-agroactiva.PNG') }}" alt="logo-agroactiva.PNG" class="sponsor-logo">
+        <img src="{{ url_for('static', filename='assets/sponsor2.png') }}" alt="Nombre Sponsor 2" class="sponsor-logo">
+        <img src="{{ url_for('static', filename='assets/sponsor3.png') }}" alt="Nombre Sponsor 3" class="sponsor-logo">
+    </div>
+</section>
   </main>
 
   <footer id="contacto">
