@@ -36,8 +36,18 @@ body {
 }
 
 .brand-logo {
-    max-height: 80px;
     border-radius: 8px;
+    heigth: auto;
+.logo-1 {
+    max-height: 80px;
+}
+
+.logo-2 {
+    max-height: 100px;
+}
+
+.logo-3 {
+    max-height: 50px;
 }
 
 .nav a {
