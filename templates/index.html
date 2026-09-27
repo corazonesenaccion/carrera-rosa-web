@@ -94,7 +94,15 @@
         <button class="gallery-item" data-caption="Juntas somos más fuertes"><div>JUNTAS<br>SOMOS<br>MÁS FUERTES</div></button>
         <button class="gallery-item" data-caption="Comunidad Carrera Rosa"><div>COMUNIDAD<br>Y<br>CONCIENCIA</div></button>
         <button class="gallery-item" data-caption="Un día para recordar"><div>CARRERA<br>ROSA</div></button>
-      </div>
+        <div class="upload-container" style="text-align: center; margin: 30px 0;">
+    <p>Añade tus propias fotos a la galería:</p>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="file-upload" class="upload-btn" style="background-color: #d63384; color: white; padding: 12px 24px; border-radius: 8px; cursor: pointer; font-weight: bold; display: inline-block;">
+            ⬆️ SUBIR IMÁGENES ACÁ
+        </label>
+        <input id="file-upload" type="file" name="file" accept="image/*" onchange="this.form.submit()" style="display: none;">
+    </form>
+   </div>
     </section> 
     
      <section id="sponsors" class="sponsors-section">
