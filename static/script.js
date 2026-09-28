@@ -11,12 +11,3 @@ document.addEventListener('DOMContentLoaded', () => {
             nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
         });
     }
-
-    // Mensaje de confirmación al hacer clic en inscripción o galerías
-    const galleryButtons = document.querySelectorAll('.gallery-item');
-    galleryButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            alert('¡Gracias por sumarte a Carrera Rosa! 💖 Juntas somos más fuertes.');
-        });
-    });
-});
