@@ -304,3 +304,33 @@ footer a {
         display: block;
     }
 }
+/* --- TAMAÑO MAXIMIZADO PARA EL VISOR DE FOTOS --- */
+#photoModal {
+    display: none;
+    position: fixed !important;
+    z-index: 100000 !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-color: rgba(0, 0, 0, 0.92) !important;
+}
+
+#photoModal > div {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+}
+
+#modalImage {
+    max-width: 90vw !important;
+    max-height: 85vh !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 10px !important;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3) !important;
+}
